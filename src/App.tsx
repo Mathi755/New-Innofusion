@@ -235,7 +235,7 @@ const App: React.FC = () => {
 
    
      {/* Registration Section */}
-     <div id="register1" className="max-w-xs mx-auto py-4 px-4 sm:px-6 lg:px-8 bg-white rounded-md">
+     
 
         <div className="text-center mb-0">
        
@@ -250,7 +250,7 @@ const App: React.FC = () => {
           
         </div>
 
-      </div>
+      
   </div>
 </div>
 
