@@ -76,7 +76,7 @@ const App: React.FC = () => {
     name: "Dr.J.Jeba Sonia", 
     phone: "jebas@srmist.edu.in", 
     image: "https://raw.githubusercontent.com/Mathi755/New-Innofusion/main/src/assets/jeba.jpg" 
-    image: "https://raw.githubusercontent.com/Mathi755/New-Innofusion/main/src/assets/jeba.jpg" 
+
   },
    { 
     name: "Dr. Jayaraj R", 
