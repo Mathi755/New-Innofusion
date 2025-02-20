@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-{}
+{}{}
 interface TimeLeft {
   days: number;
   hours: number;
