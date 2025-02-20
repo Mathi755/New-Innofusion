@@ -13,12 +13,14 @@ interface Coordinator {
   name: string;
   phone: string;
   image: string;
+  link : string;
 }
 
 interface Convenor {
   name: string;
   phone: string;
   image: string;
+  link : string;
 }
 
 
@@ -26,6 +28,7 @@ interface coConvenor {
   name: string;
   phone: string;
   image: string;
+  link : string;
 }
 
 const App: React.FC = () => {
@@ -60,7 +63,8 @@ const App: React.FC = () => {
   {
     name: "Dr. Kavitha V",
     phone: "kavithav2@srmist.edu.in",
-    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/kavitha.jpg"
+    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/kavitha.jpg",
+    link : "https://www.srmist.edu.in/faculty/dr-v-kavitha/"
   }
     
 ];
