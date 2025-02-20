@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-{}{}
+
 interface TimeLeft {
   days: number;
   hours: number;
@@ -75,6 +75,7 @@ const App: React.FC = () => {
   { 
     name: "Dr.J.Jeba Sonia", 
     phone: "jebas@srmist.edu.in", 
+    image: "https://raw.githubusercontent.com/Mathi755/New-Innofusion/main/src/assets/jeba.jpg" 
     image: "https://raw.githubusercontent.com/Mathi755/New-Innofusion/main/src/assets/jeba.jpg" 
   },
    { 
