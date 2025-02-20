@@ -459,6 +459,8 @@ const coordinators: Coordinator[] = [
 
 
 
+
+
       {/* Footer */}
       <footer className="bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
