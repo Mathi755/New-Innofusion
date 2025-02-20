@@ -65,28 +65,30 @@ const App: React.FC = () => {
     
 ];
 
- const coConvenors: coConvenor[] = [
+const coConvenors: coConvenor[] = [
   { 
     name: "Dr. T. Karthick", 
     phone: "karthict@srmist.edu.in", 
-    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/karthik.jpg" 
+    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/karthik.jpg",
+    link: "https://www.linkedin.com/in/dr-karthick-t-41b77a34/" 
   },
-  
   { 
     name: "Dr.J.Jeba Sonia", 
     phone: "jebas@srmist.edu.in", 
-    image: "https://raw.githubusercontent.com/Mathi755/New-Innofusion/main/src/assets/jeba.jpg" 
-
+    image: "https://raw.githubusercontent.com/Mathi755/New-Innofusion/main/src/assets/jeba.jpg",
+    link: "https://www.linkedin.com/in/dr-jeba-sonia-669855184/" 
   },
-   { 
+  { 
     name: "Dr. Jayaraj R", 
     phone: "jayarajr1@srmist.edu.in", 
-    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/jeyaraj.jpg" 
+    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/jeyaraj.jpg",
+    link: "https://www.srmist.edu.in/faculty/dr-r-jayaraj/" 
   },
   { 
     name: "Dr. R.Anita Jasmine", 
     phone: "anitajar1@srmist.edu.in", 
-    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/anita.jpg" 
+    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/anita.jpg",
+    link: "https://www.linkedin.com/in/anita-jasmine-r-37264472/" 
   }
 ];
 
@@ -94,28 +96,31 @@ const App: React.FC = () => {
 
 
   
-  const coordinators: Coordinator[] = [
+const coordinators: Coordinator[] = [
   {
     name: "Riduvarshini M",
     phone: "90423 98725",
-    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/Ridu2.jpg"
+    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/Ridu2.jpg",
+    link: "https://www.linkedin.com/in/riduvarshini-m-956b19337/"
   },
   {
     name: "Gomathi Nayagam S R",
     phone: "8610016966",
-    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/Mathi.jpg"
+    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/Mathi.jpg",
+    link: "https://www.linkedin.com/in/gomathi--nayagam/"
   },
   {
     name: "Guru Prasaath D",
     phone: "63699 51331",
-    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/GP2.jpg"
+    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/GP2.jpg",
+    link: "https://www.linkedin.com/in/guru-prasaath-d-3b16722b6/"
   },
   {
     name: "Jonesh Linso",
     phone: "93456 68119",
-    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/jonesh.jpg"
+    image: "https://raw.githubusercontent.com/Mathi755/InnoFuison/main/src/assets/jonesh.jpg",
+    link: "https://www.linkedin.com/in/jonesh-linso-361a69288/"
   }
-    
 ];
 
     
@@ -289,7 +294,7 @@ const App: React.FC = () => {
       {problemStatements.map((problem, index) => (
         <div
           key={index}
-          className="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-transparent hover:border-blue-500"
+          className="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-transparent hover:border-blue-500 cursor-pointer"
         >
           <p className="text-lg text-gray-800">{problem}</p>
         </div>
@@ -347,7 +352,7 @@ const App: React.FC = () => {
         </div>
       </div>
 
-     {/* Convenors */}
+{/* Convenors */}
 <div className="max-w-7xl mx-auto py-16 px-4 flex flex-col items-center">
   <h2 className="title-font text-3xl font-bold text-center text-blue-900 mb-12">
     Convenor
@@ -355,13 +360,15 @@ const App: React.FC = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-8 justify-center">
     {Convenors.map((Convenor, index) => (
       <div key={index} className="text-center group flex flex-col items-center">
-        <div className="w-32 h-32 rounded-full mb-4 overflow-hidden transform group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300 ease-in-out shadow-lg group-hover:shadow-2xl">
-          <img
-            src={Convenor.image}
-            alt={Convenor.name}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <a href="https://www.srmist.edu.in/faculty/dr-v-kavitha/" target="_blank" rel="noopener noreferrer">
+          <div className="w-32 h-32 rounded-full mb-4 overflow-hidden transform group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300 ease-in-out shadow-lg group-hover:shadow-2xl">
+            <img
+              src={Convenor.image}
+              alt={Convenor.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </a>
         <h3 className="font-bold text-lg group-hover:text-blue-600 transition-colors duration-300">
           {Convenor.name}
         </h3>
@@ -371,56 +378,59 @@ const App: React.FC = () => {
   </div>
 </div>
 
-   {/* coConvenors */}
+{/* Co-Convenors */}
 <div className="max-w-7xl mx-auto py-16 px-4 flex flex-col items-center">
-<h2 className="title-font text-3xl font-bold text-center text-blue-900 mb-12">
+  <h2 className="title-font text-3xl font-bold text-center text-blue-900 mb-12">
     Co-Convenors
-</h2>
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-center">
-{coConvenors.map((coConvenor, index) => (
-<div key={index} className="text-center group flex flex-col items-center">
-<div className="w-32 h-32 rounded-full mb-4 overflow-hidden transform group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300 ease-in-out shadow-lg group-hover:shadow-2xl">
-<img
-src={coConvenor.image}
-alt={coConvenor.name}
-className="w-full h-full object-cover"
-/>
-</div>
-<h3 className="font-bold text-lg group-hover:text-blue-600 transition-colors duration-300">
-{coConvenor.name}
-</h3>
-<p className="text-gray-600">{coConvenor.phone}</p>
-</div>
-))}
-</div>
-
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-center">
+    {coConvenors.map((coConvenor, index) => (
+      <div key={index} className="text-center group flex flex-col items-center">
+        <a href={coConvenor.link} target="_blank" rel="noopener noreferrer">
+          <div className="w-32 h-32 rounded-full mb-4 overflow-hidden transform group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300 ease-in-out shadow-lg group-hover:shadow-2xl">
+            <img
+              src={coConvenor.image}
+              alt={coConvenor.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </a>
+        <h3 className="font-bold text-lg group-hover:text-blue-600 transition-colors duration-300">
+          {coConvenor.name}
+        </h3>
+        <p className="text-gray-600">{coConvenor.phone}</p>
+      </div>
+    ))}
+  </div>
 </div>
 
 
 
       {/* Event Coordinators */}
-      <div id ="Contact"className="max-w-7xl mx-auto py-16 px-4">
-        <h2 className="title-font text-3xl font-bold text-center text-blue-900 mb-12">
-          Event Coordinators
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {coordinators.map((coordinator, index) => (
-            <div key={index} className="text-center group">
-              <div className="w-32 h-32 mx-auto rounded-full mb-4 overflow-hidden transform group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300 ease-in-out shadow-lg group-hover:shadow-2xl">
-                <img
-                  src={coordinator.image}
-                  alt={coordinator.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-bold text-lg group-hover:text-blue-600 transition-colors duration-300">
-                {coordinator.name}
-              </h3>
-              <p className="text-gray-600">{coordinator.phone}</p>
-            </div>
-          ))}
-        </div>
+<div id="Contact" className="max-w-7xl mx-auto py-16 px-4">
+  <h2 className="title-font text-3xl font-bold text-center text-blue-900 mb-12">
+    Event Coordinators
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    {coordinators.map((coordinator, index) => (
+      <div key={index} className="text-center group">
+        <a href={coordinator.link} target="_blank" rel="noopener noreferrer">
+          <div className="w-32 h-32 mx-auto rounded-full mb-4 overflow-hidden transform group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300 ease-in-out shadow-lg group-hover:shadow-2xl">
+            <img
+              src={coordinator.image}
+              alt={coordinator.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </a>
+        <h3 className="font-bold text-lg group-hover:text-blue-600 transition-colors duration-300">
+          {coordinator.name}
+        </h3>
+        <p className="text-gray-600">{coordinator.phone}</p>
       </div>
+    ))}
+  </div>
+</div>
 
       
       {/* Registration Section */}
