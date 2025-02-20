@@ -38,6 +38,12 @@ const App: React.FC = () => {
     minutes: 0,
     seconds: 0,
   });
+  const [isHomeClicked, setIsHomeClicked] = useState(false);
+
+const handleHomeClick = () => {
+  setIsHomeClicked(true);
+  setTimeout(() => setIsHomeClicked(false), 300); // Reset after animation
+};
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -154,13 +160,18 @@ const coordinators: Coordinator[] = [
     <div className="min-h-screen bg-yellow-400">
       {/* Navigation */}
       <nav className="bg-blue-900 text-white p-4">
-  <div className="max-w-7xl mx-auto flex justify-between items-center">
-    <div className="ml-auto flex space-x-4">
-      <a href="https://dsbsstudentassociation.vercel.app/" className="text-lg font-bold">Home</a>
-      
-    </div>
-  </div>
-</nav>
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="ml-auto flex space-x-4">
+          <a
+            href="https://dsbsstudentassociation.vercel.app/"
+            className={`text-lg font-bold home-button ${isHomeClicked ? 'clicked' : ''}`}
+            onClick={handleHomeClick}
+          >
+            Home
+          </a>
+        </div>
+      </div>
+    </nav>
       
       {/* Header with Logos */}
      <div className="py-0 flex justify-center">

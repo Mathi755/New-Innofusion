@@ -14,6 +14,15 @@
 .title-font {
   font-family: 'Orbitron', sans-serif;
 }
+/* Animation for the Home button */
+.home-button {
+  transition: transform 0.3s ease-in-out,color 0.3s ease-in-out;
+}
+
+.home-button:hover {
+  transform: translateY(-2px) ;
+  color: yellow;
+}
 
 body {
   margin: 0;
