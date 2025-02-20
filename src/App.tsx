@@ -280,23 +280,23 @@ const App: React.FC = () => {
       </div>
 
       {/* Problem Statements */}
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="title-font text-4xl font-extrabold tracking-tight mb-8">
-            Problem Statements
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {problemStatements.map((problem, index) => (
-              <div
-                key={index}
-                className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <p className="text-lg text-gray-800">{problem}</p>
-              </div>
-            ))}
-          </div>
+<div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+  <div className="text-center">
+    <h2 className="title-font text-4xl font-extrabold tracking-tight mb-8">
+      Problem Statements
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {problemStatements.map((problem, index) => (
+        <div
+          key={index}
+          className="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-transparent hover:border-blue-500"
+        >
+          <p className="text-lg text-gray-800">{problem}</p>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
 
       {/* Rules and Guidelines */}
       <div className="max-w-7xl mx-auto py-16 px-4 bg-white rounded-lg shadow-lg my-16">
