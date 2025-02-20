@@ -437,31 +437,25 @@ const coordinators: Coordinator[] = [
 </div>
 
       
-      {/* Registration Section */}
-      <div id="register" className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        
-        <div className="text-center mb-12">
-          
-          <h2 className="title-font text-3xl font-extrabold text-blue-900 sm:text-4xl">
-              Register Now
-          </h2>
-          
-          <p className="mt-4 text-sm sm:text-lg text-gray-600 mb-8">
-            Register your team for INNOFUSION &apos;25
-          </p>
-          
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSffXFC6idN8cEcx-KoEj4vJgkOvKLA5PRc2ghzpyxd6sAFMDA/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-300"
-          >
-            Register Now
-          </a>
-          
-        </div>
-
-      </div>
+{/* Registration Section */}
+<div id="register" className="max-w-sm mx-auto py-6 px-4 sm:px-6 lg:px-8 bg-white rounded-lg shadow-lg">
+  <div className="text-center mb-3">
+    <h2 className="title-font text-3xl font-extrabold text-blue-900 sm:text-4xl">
+      Register Now
+    </h2>
+    <p className="mt-4 text-sm sm:text-lg text-gray-600 mb-6">
+      Register your team for INNOFUSION &apos;25
+    </p>
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSffXFC6idN8cEcx-KoEj4vJgkOvKLA5PRc2ghzpyxd6sAFMDA/viewform"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-300"
+    >
+      Register Now
+    </a>
+  </div>
+</div>
 
 
 
