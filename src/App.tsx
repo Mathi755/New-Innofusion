@@ -47,7 +47,7 @@ const handleHomeClick = () => {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const eventDate = new Date('2025-02-22T23:59:59').getTime();
+      const eventDate = new Date('2025-02-22T18:00:00').getTime();
       const now = new Date().getTime();
       const difference = eventDate - now;
 
