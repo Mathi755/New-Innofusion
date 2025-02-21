@@ -44,26 +44,34 @@ const handleHomeClick = () => {
   setIsHomeClicked(true);
   setTimeout(() => setIsHomeClicked(false), 300); // Reset after animation
 };
+const [message, setMessage] = useState('');
+useEffect(() => {
+  const calculateTimeLeft = () => {
+    const eventDate = new Date('2025-02-22T18:00:00').getTime();
+    const now = new Date().getTime();
+    const difference = eventDate - now;
 
-  useEffect(() => {
-    const calculateTimeLeft = () => {
-      const eventDate = new Date('2025-02-22T23:59:59').getTime();
-      const now = new Date().getTime();
-      const difference = eventDate - now;
+    if (difference > 0) {
+      setTimeLeft({
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      });
+    } else {
+      setTimeLeft({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+      });
+      setMessage('Registration over. We are waiting for you in this exciting event!');
+    }
+  };
 
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        });
-      }
-    };
-
-    const timer = setInterval(calculateTimeLeft, 1000);
-    return () => clearInterval(timer);
-  }, []);
+  const timer = setInterval(calculateTimeLeft, 1000);
+  return () => clearInterval(timer);
+}, []);
 
   const Convenors: Convenor[] = [
   {
@@ -214,32 +222,35 @@ const coordinators: Coordinator[] = [
   </h1> 
 </div>
 
-    <div className="mt-8 grid grid-cols-1 gap-4 max-w-2xl mx-auto">
-  <p className="font-bold">Registration ends by</p>
-</div>
+    
 
 
-    {/* Countdown Timer */}
-    {/* Countdown Timer */}
-<div className="mt-12 grid grid-cols-4 gap-4 max-w-2xl mx-auto">
-  
-  <div className="bg-blue-800 p-4 rounded-lg">
-    <div className="text-4xl sm:text-2xl font-bold">{timeLeft.days}</div>
-    <div className="text-sm sm:text-xs">Days</div>
-  </div>
-  <div className="bg-blue-800 p-4 rounded-lg">
-    <div className="text-4xl sm:text-2xl font-bold">{timeLeft.hours}</div>
-    <div className="text-sm sm:text-xs">Hours</div>
-  </div>
-  <div className="bg-blue-800 p-4 rounded-lg">
-    <div className="text-4xl sm:text-2xl font-bold">{timeLeft.minutes}</div>
-    <div className="text-sm sm:text-xs">Minutes</div>
-  </div>
-  <div className="bg-blue-800 p-4 rounded-lg">
-    <div className="text-4xl sm:text-2xl font-bold">{timeLeft.seconds}</div>
-    <div className="text-sm sm:text-xs">Seconds</div>
-  </div>
-</div>
+   {/* Countdown Timer */}
+   {message ? (
+          <div className="mt-12 text-2xl font-bold text-red-600">
+            {message}
+          </div>
+        ) : (
+          
+          <div className="mt-12 grid grid-cols-4 gap-4 max-w-2xl mx-auto">
+            <div className="bg-blue-800 p-4 rounded-lg">
+              <div className="text-4xl sm:text-2xl font-bold">{timeLeft.days}</div>
+              <div className="text-sm sm:text-xs">Days</div>
+            </div>
+            <div className="bg-blue-800 p-4 rounded-lg">
+              <div className="text-4xl sm:text-2xl font-bold">{timeLeft.hours}</div>
+              <div className="text-sm sm:text-xs">Hours</div>
+            </div>
+            <div className="bg-blue-800 p-4 rounded-lg">
+              <div className="text-4xl sm:text-2xl font-bold">{timeLeft.minutes}</div>
+              <div className="text-sm sm:text-xs">Minutes</div>
+            </div>
+            <div className="bg-blue-800 p-4 rounded-lg">
+              <div className="text-4xl sm:text-2xl font-bold">{timeLeft.seconds}</div>
+              <div className="text-sm sm:text-xs">Seconds</div>
+            </div>
+          </div>
+        )}
 
 
 
