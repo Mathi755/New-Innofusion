@@ -51,6 +51,12 @@ useEffect(() => {
     const now = new Date().getTime();
     const difference = eventDate - now;
 
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const eventDate = new Date('2025-02-22T18:00:00').getTime();
+      const now = new Date().getTime();
+      const difference = eventDate - now;
+
     if (difference > 0) {
       setTimeLeft({
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
